@@ -1,0 +1,11 @@
+$main-bg: #131212;
+$white: #fff;
+$orange: #ff1f1f;
+$baseFont: "Inter", sans-serif;
+
+@mixin fontSetings($s: 14px, $w: 400, $lh: 22px) {
+  font-family: $baseFont;
+  font-size: $s;
+  font-weight: $w;
+  line-height: $lh;
+}

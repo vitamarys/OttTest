@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ott Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display`=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/all.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#">
+          <img src="./imgs/logo.svg" alt="logo" class="logo" />
+        </a>
+        <div class="controls">
+          <div class="social-links">
+            <a href="#" class="social-links__item">
+              <img src="./imgs/fb.svg" alt="fb" />
+            </a>
+            <a href="#" class="social-links__item">
+              <img src="./imgs/telegram.svg" alt="telegram" />
+            </a>
+          </div>
+          <a href="#" class="registration">Регистрация</a>
+          <a href="#" class="sing-in">Войти</a>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-content__item">
+            <h1 class="title">Более 270 телеканалов в прямом эфире</h1>
+            <img src="./imgs/mob-hero.png" class="mob-hero" alt="hero-img">
+            <h3 class="sub-title">
+              Национальные, познавательные, детские, кино, спортивные, новостные
+              и многие другие каналы
+            </h3>
+            <button class="btn-orange">Протестировать 7 дней бесплатно</button>
+          </div>
+          <div class="hero-content__item">
+            <picture>
+                <source media="(max-width: 768px)" srcset="./imgs/hero-baner-768w.png">
+                <source media="(max-width: 1440px)" srcset="./imgs/hero-baner-1440w.png">
+                <source media="(min-width: 1440px)" srcset="./imgs/hero-baner.png">
+                <img           
+                src="./imgs/hero-baner.png" alt="hero-baner" class="desk-hero" />
+            </picture>
+         
+          </div>
+        </div>
+        <div class="advantages-block">
+          <div class="advantages-block__item">
+            <img src="./imgs/gift.svg" class="icon" alt="icon" />
+            <h3 class="title">Бесплатный тест</h3>
+            <p class="description">7 дней бесплатного тестового просмотра</p>
+          </div>
+          <div class="advantages-block__item">
+            <img src="./imgs/Desktop.svg" class="icon" alt="icon" />
+            <h3 class="title">5 устройств = 1 подписка</h3>
+            <p class="description">Подключайте 5 устройствв одной подписке</p>
+          </div>
+          <div class="advantages-block__item">
+            <img src="./imgs/tv.svg" class="icon" alt="icon" />
+            <h3 class="title">Архив трансляций</h3>
+            <p class="description">Смотрите 7 дней телеэфирав записи</p>
+          </div>
+          <div class="advantages-block__item">
+            <img src="./imgs/Planet.svg" class="icon" alt="icon" />
+            <h3 class="title">Без привязки к месту</h3>
+            <p class="description">7 дней бесплатного тестового просмотра</p>
+          </div>
+        </div>
+      </div>
+      <img src="./imgs/bats.png" class="bats" alt="bats" />
+    </section>
+
+    <section class="channels">
+      <div class="container">
+        <section class="tariff-wrap">
+          <div class="eye-block">
+            <div class="eye-warp">
+              <img src="./imgs/eye.png" alt="eye" />
+            </div>
+          </div>
+          <div class="tariff-item">
+            <p class="price">1€<span class="mounth">/ МЕСЯЦ</span></p>
+            <p class="description">Покупая подписку более, чем на 6 месяцев</p>
+          </div>
+          <div class="tariff-item">
+            <ul class="list">
+              <li class="list__item">Более 270 каналов</li>
+              <li class="list__item">127 FullHD каналов</li>
+              <li class="list__item">Режим Ultra TV Sport</li>
+              <li class="list__item">Архив каналов</li>
+              <li class="list__item">5 устройств</li>
+            </ul>
+          </div>
+          <form action="#" class="form">
+            <input type="email" class="input" placeholder="Email" />
+            <button class="btn-orange">Подключить тариф</button>
+          </form>
+        </section>
+        <h2 class="title">ТВ - каналы</h2>
+        <p class="description">
+          Национальные, познавательные, детские, кино, спортивные, новостные и
+          многие другие телеканалы
+        </p>
+        <section class="tabs">
+          <div class="tabs__controllers">
+            <button class="tabs__controllers__item active" 
+            data-title="popular"
+            >Популярные</button>
+            <button class="tabs__controllers__item"
+            data-title="national"
+            >Национальные</button>
+            <button class="tabs__controllers__item"
+            data-title="knowledgeable"
+            >Познавательные</button>
+            <button class="tabs__controllers__item"
+            data-title="films"
+            >Кино</button>
+            <button class="tabs__controllers__item"
+            data-title="sport"
+            >Спорт</button>
+            <button class="tabs__controllers__item"
+            data-title="child"
+            >Детские</button>
+            <button class="tabs__controllers__item"
+            data-title="music"
+            >Музыкальные</button>
+            <button class="tabs__controllers__item"
+            data-title="news"
+            >Новостные</button>
+          </div>
+          <div class="tabs__body active" data-body="popular">
+            <div class="tabs__body__item orange">
+              <img
+                src="./imgs/1.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/2.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/3.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/4.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/5.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/6.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/7.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/8.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/9.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/10.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item orange">
+                <img
+                  src="./imgs/1.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item blue">
+                <img
+                  src="./imgs/2.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item green">
+                <img
+                  src="./imgs/3.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item purple">
+                <img
+                  src="./imgs/4.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item yellow">
+                <img
+                  src="./imgs/5.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item blue">
+                <img
+                  src="./imgs/6.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item green">
+                <img
+                  src="./imgs/7.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item purple">
+                <img
+                  src="./imgs/8.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item green">
+                <img
+                  src="./imgs/9.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+              <div class="tabs__body__item purple">
+                <img
+                  src="./imgs/10.png"
+                  class="tabs__body__item__img"
+                  alt="channel-logo"
+                />
+              </div>
+            <button class="show-all hide">Показать все</button>
+          </div>
+          <div class="tabs__body" data-body="national">
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/1.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/2.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/3.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/4.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/5.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/6.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/7.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/8.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/9.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/10.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <button class="show-all hide">Показать все</button>
+          </div>
+          <div class="tabs__body" data-body="knowledgeable">
+            <div class="tabs__body__item purple hide">
+                
+              <img
+                src="./imgs/1.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/2.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/3.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/4.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/5.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/6.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/7.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/8.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/9.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/10.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <button class="show-all hide">Показать все</button>
+          </div>
+          <div class="tabs__body" data-body="films">
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/1.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/2.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/3.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/4.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/5.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/6.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/7.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/8.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/9.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/10.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <button class="show-all hide">Показать все</button>
+          </div>
+          <div class="tabs__body" data-body="sport">
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/1.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/2.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/3.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/4.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/5.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/6.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/7.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/8.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/9.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/10.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <button class="show-all hide">Показать все</button>
+          </div>
+          <div class="tabs__body" data-body="child">
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/1.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/2.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/3.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/4.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/5.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/6.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/7.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/8.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/9.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/10.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <button class="show-all hide">Показать все</button>
+          </div>
+          <div class="tabs__body" data-body="music">
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/1.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/2.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/3.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/4.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/5.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/6.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/7.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/8.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/9.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/10.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <button class="show-all hide">Показать все</button>
+          </div>
+          <div class="tabs__body" data-body="news">
+            <div class="tabs__body__item purple">
+                
+              <img
+                src="./imgs/1.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/2.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/3.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/4.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item yellow">
+              <img
+                src="./imgs/5.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item blue">
+              <img
+                src="./imgs/6.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/7.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/8.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item green">
+              <img
+                src="./imgs/9.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <div class="tabs__body__item purple">
+              <img
+                src="./imgs/10.png"
+                class="tabs__body__item__img"
+                alt="channel-logo"
+              />
+            </div>
+            <button class="show-all hide">Показать все</button>
+          </div>
+        </section>
+        <section class="devices">
+          <div class="devices__block">
+            <h2 class="title">Смотрите на разных устройствах</h2>
+            <p class="description">
+              Подключайте подписку FULL и смотрите любимые канал на 5
+              устройствах, среди которых: телевизор, компьютер, планшет или
+              смартфон
+            </p>
+            <img src="./imgs/Devices-mob.png" class="devices-mob"  alt="devices">
+            <button class="btn-orange">Протестировать 7 дней бесплатно</button>
+          </div>
+          <div class="devices__block">
+
+            <picture>
+                <source media="(max-width: 768px)" srcset="./imgs/Devices-768w.png">
+                <source media="(max-width: 1024px)" srcset="./imgs/Devices-968w.png">
+                <source media="(max-width: 1440px)" srcset="./imgs/Devices-1440w.png">
+                <source media="(min-width: 1440px)" srcset="./imgs/Devices.png">
+
+                <img src="./imgs/Devices.png" class="devices-img" alt="devices" />
+            </picture>
+            <!-- <picture>
+                <source media="(max-width: 1440px)" srcset="./imgs/tv-1440w.png">
+                <source media="(min-width: 1440px)" srcset="./imgs/tv.png">
+                <img src="./imgs/tv.png" class="tv" alt="tv" />
+
+            </picture>
+            <picture>
+                <source media="(max-width: 1440px)" srcset="./imgs/ipad-1440w.png">
+                <source media="(min-width: 1440px)" srcset="./imgs/ipad.png">
+                <img src="./imgs/ipad.png" class="ipad" alt="ipad" />
+
+            </picture>
+            <picture>
+                <source media="(max-width: 1440px)" srcset="./imgs/Macbook-1440w.png">
+                <source media="(min-width: 1440px)" srcset="./imgs/Macbook.png">
+                <img src="./imgs/Macbook.png" class="mac" alt="Macbook" />
+            </picture>
+            <picture>
+                <source media="(max-width: 1440px)" srcset="./imgs/iph-1440w.png">
+                <source media="(min-width: 1440px)" srcset="./imgs/iph.png">
+                <img src="./imgs/iph.png" class="phone" alt="iphone" />
+            </picture> -->
+           
+          </div>
+        </section>
+      </div>
+    </section>
+  
+    <section class="platforms">
+      <div class="container">
+        <div class="platforms__item">
+            <picture>
+
+                <source media="(max-width: 768px)" srcset="./imgs/Lg-768w.png">
+
+                <source media="(max-width: 1440px)" srcset="./imgs/Lg-1440w.svg">
+                <source media="(min-width: 1440px)" srcset="./imgs/Lg.svg">
+                <img src="./imgs/Lg.svg" alt="lg" />
+            </picture>
+        
+        </div>
+        <div class="platforms__item">
+            <picture>
+                <source media="(max-width: 768px)" srcset="./imgs/ios-768w.png">
+
+                <source media="(max-width: 1440px)" srcset="./imgs/ios-1440w.png">
+                <source media="(min-width: 1440px)" srcset="./imgs/iOS.png">
+                <img src="./imgs/iOS.png" alt="ios" />
+
+            </picture>
+        </div>
+        <div class="platforms__item">
+            <picture>
+                <source media="(max-width: 768px)" srcset="./imgs/Android-768w.png">
+
+                <source media="(max-width: 1440px)" srcset="./imgs/Android-1440w.svg">
+                <source media="(min-width: 1440px)" srcset="./imgs/Android.svg">
+                <img src="./imgs/Android.svg" alt="Android" />
+
+            </picture>
+        </div>
+        <div class="platforms__item">
+            <picture>
+                <source media="(max-width: 768px)" srcset="./imgs/Samsung-768w.png">
+
+                <source media="(max-width: 1440px)" srcset="./imgs/Samsung-1440w.svg">
+                <source media="(min-width: 1440px)" srcset="./imgs/Samsung.svg">
+                <img src="./imgs/Samsung.svg" alt="Samsung" />
+
+
+            </picture>
+        </div>
+      </div>
+    </section>
+   
+    <section class="faq">
+      <div class="container">
+        <h2 class="title">Популярные вопросы</h2>
+        <div class="faq__list">
+          <div class="faq__list__item">
+            <h4 class="faq__list__item__title">
+              Как подключить подписку OTTCLUB или продлить ее?
+            </h4>
+            <p class="faq__list__item__description">
+              Какая необходима скорость соединения для стабильного просмотра
+              каналов? Какая необходима скорость соединения для стабильного
+              просмотра каналов?
+            </p>
+          </div>
+          <div class="faq__list__item">
+            <h4 class="faq__list__item__title">
+              Как смотреть на телевизоре Samsung?
+            </h4>
+            <p class="faq__list__item__description">
+              Какая необходима скорость соединения для стабильного просмотра
+              каналов? Какая необходима скорость соединения для стабильного
+              просмотра каналов?
+            </p>
+          </div>
+          <div class="faq__list__item">
+            <h4 class="faq__list__item__title">
+              Как смотреть одновременно на разных устройствах?
+            </h4>
+            <p class="faq__list__item__description">
+              Какая необходима скорость соединения для стабильного просмотра
+              каналов? Какая необходима скорость соединения для стабильного
+              просмотра каналов?
+            </p>
+          </div>
+       
+        </div>
+        <div class="faq__list">
+           
+            <div class="faq__list__item">
+              <h4 class="faq__list__item__title">
+                Как посмотреть передачу, которая была в эфире ранее?
+              </h4>
+              <p class="faq__list__item__description">
+                Какая необходима скорость соединения для стабильного просмотра
+                каналов? Какая необходима скорость соединения для стабильного
+                просмотра каналов?
+              </p>
+            </div>
+            <div class="faq__list__item">
+              <h4 class="faq__list__item__title">
+                Какая скорость соединения необходима для просмотра каналов?
+              </h4>
+              <p class="faq__list__item__description">
+                Какая необходима скорость соединения для стабильного просмотра
+                каналов? Какая необходима скорость соединения для стабильного
+                просмотра каналов?
+              </p>
+            </div>
+            <div class="faq__list__item">
+              <h4 class="faq__list__item__title">
+                Как работает бесплатный тестовый период?
+              </h4>
+              <p class="faq__list__item__description">
+                Какая необходима скорость соединения для стабильного просмотра
+                каналов? Какая необходима скорость соединения для стабильного
+                просмотра каналов?
+              </p>
+            </div>
+          </div>
+      </div>
+    <footer class="footer">
+       <div class="container">
+        <div class="footer__block">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list__item"><a href="#">О нас</a></li>
+                    <li class="nav__list__item"><a href="#">Пользовательское соглашение</a></li>
+                    <li class="nav__list__item"><a href="#">Политикаконфиденциальности</a></li>
+                    <li class="nav__list__item"><a href="#">ТВ-Каналам</a></li>
+                </ul>
+                <ul class="nav__list">
+                    <li class="nav__list__item"><a href="#">Проверка скорости</a></li>
+                    <li class="nav__list__item"><a href="#">Правила оформления подписки</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__block contact">
+            <div>
+                <h4 class="list-title">Помощь</h4>
+                <ul class="contact-list">
+                    <li class="contact-list__item"><a href="tel:+442045772169"">+442045772169 (Англия)</a></li>
+                    <li class="contact-list__item"><a href="tel:+420255708953">+420255708953 (Европа)</a></li>
+                    <li class="contact-list__item"><a href="tel:+97233751723">+97233751723 (Израиль)</a></li>
+                    <li class="contact-list__item"><a href="mailto:support@ottclub.cc">support@ottclub.cc</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="sub-title">Чат-поддержка</h4>
+                <div class="chat-links">
+                    <a href="#" class="chat-links__item">
+                        <img src="./imgs/wa.svg" alt="whatsUp">
+                    </a>
+                    <a href="#" class="chat-links__item">
+                        <img src="./imgs/tl.svg" alt="telegram">
+                    </a>
+    
+                </div>
+            </div>
+         
+        </div>
+        <div class="payment-list">
+            <div class="payment-list__item">
+                <img src="./imgs/logos_visa.png" alt="visa">
+            </div>
+            <div class="payment-list__item">
+                <img src="./imgs/master.png" alt="master">
+            </div>
+            <div class="payment-list__item">
+                <img src="./imgs/kassa.png" alt="kassa">
+            </div>
+            <div class="payment-list__item">
+                <img src="./imgs/pay.png" alt="paySera">
+            </div>
+            <div class="payment-list__item">
+                <img src="./imgs/sepa.png" alt="sepa">
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright-item">
+                <img src="./imgs/emojione-monotone_copyright.svg" alt="copyright">
+                <p class="copyright__text"> 2021-2022 COMPANY NAME</p>
+            </div>
+            <div class="copyright-item">
+                <img src="./imgs/Ellipse.svg" class="ellipse" alt="Ellipse">
+                <p class="copyright__text">Company number 1221514</p>
+            </div>
+           
+        </div>
+       </div> 
+    </footer>
+    <picture>
+        <source media="(max-width: 767px)" srcset="./imgs/bg_pic-480w.png">
+        <source media="(max-width: 1440px)" srcset="./imgs/bg_pic-768w.png">
+        <source media="(min-width: 1440px)" srcset="./imgs/bg_pic.png">
+        <img src="./imgs/bg_pic.png" alt="tree" class="tree">
+    </picture>
+   
+    <img src="./imgs/bg_footer.png" alt="" class="gradient">
+    </section> 
+   <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1324 @@
+.header {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 30px 0;
+  z-index: 2;
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding: 40px 0;
+  }
+  @include adaptive(phoneExtraSmall) {
+    padding: 16px 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      @include adaptive(desktopS, tabletLandscape) {
+        height: 72px;
+      }
+      @include adaptive(
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait,
+        phoneExtraSmall
+      ) {
+        height: 55px;
+      }
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+
+      .social-links {
+        display: flex;
+        gap: 16px;
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          display: none;
+        }
+      }
+      .registration {
+        @include fontSetings($s: 20px, $w: 600, $lh: 140%);
+        color: $white;
+        margin-left: 50px;
+        opacity: 0.8;
+        @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
+          @include fontSetings($s: 16px, $w: 600, $lh: 140%);
+        }
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          display: none;
+        }
+      }
+      .sing-in {
+        @include fontSetings($s: 20px, $w: 500, $lh: 14px);
+        color: $white;
+        margin-left: 50px;
+        padding: 16px 32px;
+        border-radius: 5px;
+        border: 2px solid $white;
+        @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
+          @include fontSetings($s: 16px, $w: 600, $lh: 140%);
+        }
+        @include adaptive(tabletLandscape, tabletPortrait) {
+          padding: 11px 24px;
+        }
+        @include adaptive(
+          desktopS,
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait,
+          phoneExtraSmall
+        ) {
+          @include fontSetings($s: 16px, $w: 600, $lh: 140%);
+          padding: 9px 24px;
+        }
+      }
+    }
+  }
+}
+.hero {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  background-image: url("../imgs/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+  overflow: hidden;
+  @include adaptive(tabletPortrait) {
+    padding-top: 100px;
+    padding-bottom: 45px;
+
+    background-image: url("../imgs/BG.png");
+    background-position: top;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-top: 100px;
+    padding-bottom: 45px;
+
+    background-position: top;
+  }
+
+  .bats {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    transform: translateY(30%);
+    object-fit: contain;
+    z-index: 1;
+    width: 100%;
+    @include adaptive(desktopS, tabletLandscape) {
+      transform: translateY(0%);
+    }
+    @include adaptive(tabletLandscape, tabletPortrait) {
+      transform: translateY(-30%);
+    }
+    @include adaptive(tabletPortrait) {
+      transform: translateY(-10%);
+    }
+    @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .container {
+    z-index: 2;
+    position: relative;
+    .hero-content {
+      display: flex;
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        flex-direction: column;
+      }
+      &__item {
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          width: 100%;
+        }
+        &:nth-child(1) {
+          width: 48%;
+          padding-top: 70px;
+          flex-shrink: 0;
+          @include adaptive(tabletLandscape) {
+            width: 50%;
+          }
+          @include adaptive(tabletPortrait) {
+            width: 60%;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            width: 100%;
+          }
+        }
+        .title {
+          @include fontSetings($s: 56px, $w: 600, $lh: 120%);
+          margin-bottom: 50px;
+          @include adaptive(desktopS) {
+            @include fontSetings($s: 42px, $w: 600, $lh: 120%);
+            margin-bottom: 32px;
+          }
+          @include adaptive(tabletLandscape) {
+            @include fontSetings($s: 38px, $w: 600, $lh: 120%);
+            margin-bottom: 32px;
+          }
+          @include adaptive(tabletPortrait) {
+            @include fontSetings($s: 32px, $w: 600, $lh: 120%);
+            margin-bottom: 24px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            @include fontSetings($s: 28px, $w: 600, $lh: 120%);
+            text-align: center;
+            margin-bottom: 0;
+          }
+          @include adaptive(phoneExtraSmall) {
+            @include fontSetings($s: 24px, $w: 600, $lh: 120%);
+            text-align: center;
+          }
+        }
+        .mob-hero {
+          display: none;
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            display: block;
+            width: 100%;
+          }
+        }
+        .sub-title {
+          @include fontSetings($s: 26px, $w: 400, $lh: 140%);
+          opacity: 0.8;
+          margin-bottom: 70px;
+          @include adaptive(desktopS) {
+            @include fontSetings($s: 20px, $w: 400, $lh: 140%);
+            margin-bottom: 55px;
+          }
+          @include adaptive(tabletLandscape) {
+            @include fontSetings($s: 18px, $w: 400, $lh: 140%);
+            margin-bottom: 50px;
+          }
+          @include adaptive(tabletPortrait) {
+            @include fontSetings($s: 17px, $w: 400, $lh: 140%);
+            margin-bottom: 34px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            @include fontSetings($s: 16px, $w: 400, $lh: 140%);
+            text-align: center;
+            margin-bottom: 32px;
+          }
+          @include adaptive(phoneExtraSmall) {
+            @include fontSetings($s: 15px, $w: 400, $lh: 140%);
+            text-align: center;
+            margin-bottom: 24px;
+          }
+        }
+        .btn-orange {
+          padding: 24px 40px;
+          @include fontSetings($s: 26px, $w: 400, $lh: 140%);
+          @include adaptive(desktopS) {
+            padding: 18px 32px;
+            @include fontSetings($s: 20px, $w: 400, $lh: 140%);
+          }
+          @include adaptive(tabletLandscape) {
+            padding: 16px 28px;
+
+            @include fontSetings($s: 18px, $w: 400, $lh: 140%);
+          }
+          @include adaptive(tabletPortrait, phoneLandscape, phonePortrait) {
+            padding: 16px 24px;
+            @include fontSetings($s: 17px, $w: 400, $lh: 140%);
+            width: 100%;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            @include fontSetings($s: 15px, $w: 400, $lh: 140%);
+            padding: 14px;
+            width: 100%;
+          }
+        }
+        .desk-hero {
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            display: none;
+          }
+        }
+        img {
+          @include adaptive(desktopS) {
+            width: 130%;
+          }
+          @include adaptive(tabletLandscape) {
+            width: 145%;
+          }
+        }
+      }
+    }
+    .advantages-block {
+      display: flex;
+      margin-top: 60px;
+      width: 100%;
+      gap: 32px;
+      @include adaptive(desktopS) {
+        margin-top: 50px;
+      }
+      @include adaptive(tabletLandscape, tabletPortrait) {
+        margin-top: 40px;
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        display: none;
+      }
+      &__item {
+        @include adaptive(tabletPortrait) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      .icon {
+        margin-bottom: 32px;
+        @include adaptive(desktopS) {
+          margin-bottom: 24px;
+        }
+        @include adaptive(tabletLandscape) {
+          margin-bottom: 20px;
+        }
+        @include adaptive(tabletPortrait) {
+          margin-bottom: 12px;
+          width: 48px;
+          height: 48px;
+        }
+      }
+      .title {
+        @include fontSetings($s: 24px, $w: 600, $lh: 100%);
+        margin-bottom: 7px;
+        @include adaptive(desktopS) {
+          @include fontSetings($s: 18px, $w: 600, $lh: 100%);
+          margin-bottom: 12px;
+        }
+        @include adaptive(tabletLandscape) {
+          @include fontSetings($s: 16px, $w: 600, $lh: 100%);
+          margin-bottom: 16px;
+        }
+        @include adaptive(tabletPortrait) {
+          text-align: center;
+          @include fontSetings($s: 16px, $w: 600, $lh: 150%);
+        }
+      }
+      .description {
+        max-width: 340px;
+        @include fontSetings($s: 20px, $w: 400, $lh: 150%);
+        opacity: 0.8;
+        @include adaptive(desktopS) {
+          @include fontSetings($s: 16px, $w: 400, $lh: 150%);
+        }
+        @include adaptive(tabletLandscape) {
+          @include fontSetings($s: 16px, $w: 600, $lh: 100%);
+        }
+        @include adaptive(tabletPortrait) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.channels {
+  padding-top: 55px;
+  position: relative;
+  background-image: url("../imgs/bg2.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: left top;
+  @include adaptive(
+    tabletLandscape,
+    phoneLandscape,
+    phonePortrait,
+    phoneExtraSmall
+  ) {
+    background-size: 100%;
+    background-position: left center;
+  }
+
+  .container {
+    .tariff-wrap {
+      padding: 100px 195px;
+      width: 100%;
+      margin: 0 auto;
+      border: 2px solid $orange;
+      border-radius: 10px;
+      position: relative;
+      max-width: 1150px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 125px;
+      overflow: visible;
+      background-color: transparent;
+      @include adaptive(desktopS) {
+        padding: 80px 140px 60px 140px;
+        max-width: 860px;
+      }
+      @include adaptive(tabletLandscape) {
+        padding: 80px 120px 60px 120px;
+        max-width: 860px;
+      }
+      @include adaptive(tabletPortrait) {
+        padding: 80px 80px 40px 80px;
+        justify-content: space-between;
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        flex-direction: column;
+        padding: 70px 15px 40px 15px;
+        margin-bottom: 80px;
+      }
+      .eye-block {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, calc(-40% + 2px));
+        .eye-warp {
+          padding: 25px;
+          position: relative;
+
+          border-radius: 50%;
+          background: $main-bg;
+          @include adaptive(desktopS) {
+            padding: 20px;
+          }
+          @include adaptive(
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait,
+            phoneExtraSmall
+          ) {
+            padding: 18px;
+          }
+          @include adaptive(
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait,
+            phoneExtraSmall
+          ) {
+            padding: 18px;
+          }
+          img {
+            width: 72px;
+            height: 90px;
+            @include adaptive(desktopS) {
+              width: 54px;
+              height: 68px;
+            }
+            @include adaptive(
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait,
+              phoneExtraSmall
+            ) {
+              width: 46px;
+              height: 58px;
+            }
+            @include adaptive(phoneExtraSmall) {
+              width: 40px;
+              height: 50px;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: linear-gradient(180deg, $orange 39%, $main-bg 39%);
+          }
+        }
+      }
+
+      .tariff-item {
+        width: 50%;
+        @include adaptive(tabletPortrait) {
+          width: calc(50% - 40px);
+        }
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          width: 100%;
+        }
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .price {
+          opacity: 1;
+          color: $orange;
+          @include fontSetings($s: 67px, $w: 600, $lh: 100%);
+          margin-bottom: 20px;
+          .mounth {
+            color: $white;
+            @include fontSetings($s: 16px, $w: 300, $lh: 100%);
+            opacity: 0.8;
+          }
+        }
+        .description {
+          @include fontSetings($s: 20px, $w: 400, $lh: 140%);
+          opacity: 0.8;
+          text-align: center;
+          max-width: 245px;
+          @include adaptive(
+            desktopS,
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait,
+            phoneExtraSmall
+          ) {
+            @include fontSetings($s: 16px, $w: 400, $lh: 140%);
+            max-width: 200px;
+          }
+        }
+        .list {
+          display: flex;
+          flex-direction: column;
+          gap: 26px;
+          @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
+            gap: 20px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            gap: 18px;
+            padding-left: 30px;
+          }
+          @include adaptive(phoneExtraSmall) {
+            gap: 16px;
+            padding-left: 30px;
+          }
+          &__item {
+            @include fontSetings($s: 26px, $w: 400, $lh: 100%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include adaptive(desktopS) {
+              @include fontSetings($s: 20px, $w: 400, $lh: 100%);
+            }
+            @include adaptive(tabletLandscape) {
+              @include fontSetings($s: 18px, $w: 400, $lh: 100%);
+              letter-spacing: 0.18px;
+            }
+            @include adaptive(
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait,
+              phoneExtraSmall
+            ) {
+              @include fontSetings($s: 16px, $w: 400, $lh: 100%);
+              letter-spacing: 0.32px;
+              gap: 16px;
+            }
+            &::before {
+              content: url("../imgs/check.svg");
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+      }
+      .form {
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          flex-direction: column;
+          gap: 15px;
+          margin-top: 30px;
+        }
+        .input {
+          width: 55%;
+          padding: 20px;
+          @include fontSetings($s: 22px, $w: 400, $lh: 30px);
+          opacity: 0.9;
+          letter-spacing: 0.2px;
+          border-radius: 5px 0px 0px 5px;
+          border: 1px solid #d0d0d1;
+          background: #fff;
+          @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
+            padding: 16px;
+            @include fontSetings($s: 18px, $w: 400, $lh: 23px);
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            width: 100%;
+            padding: 15px 16px;
+            border-radius: 5px;
+
+            @include fontSetings($s: 17px, $w: 400, $lh: 23px);
+          }
+        }
+
+        .btn-orange {
+          width: 45%;
+          border-radius: 0px 5px 5px 0px;
+          cursor: pointer;
+          @include fontSetings($s: 24px, $w: 500, $lh: 100%);
+          @include adaptive(desktopS) {
+            @include fontSetings($s: 20px, $w: 500, $lh: 100%);
+          }
+          @include adaptive(tabletLandscape) {
+            @include fontSetings($s: 18px, $w: 500, $lh: 100%);
+          }
+          @include adaptive(tabletPortrait) {
+            @include fontSetings($s: 17px, $w: 500, $lh: 100%);
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            width: 100%;
+            padding: 15px 16px;
+            border-radius: 5px;
+
+            @include fontSetings($s: 17px, $w: 400, $lh: 23px);
+          }
+        }
+      }
+    }
+    .title {
+      @include fontSetings($s: 52px, $w: 500, $lh: 140%);
+      opacity: 0.9;
+      position: relative;
+      width: fit-content;
+      margin-bottom: 15px;
+      @include adaptive(desktopS) {
+        @include fontSetings($s: 40px, $w: 500, $lh: 140%);
+      }
+      @include adaptive(tabletLandscape) {
+        @include fontSetings($s: 36px, $w: 500, $lh: 140%);
+      }
+      @include adaptive(tabletPortrait) {
+        @include fontSetings($s: 30px, $w: 500, $lh: 140%);
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        @include fontSetings($s: 28px, $w: 500, $lh: 140%);
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 13px;
+      }
+      @include adaptive(phoneExtraSmall) {
+        @include fontSetings($s: 24px, $w: 500, $lh: 140%);
+        text-align: center;
+        margin-bottom: 8px;
+
+        margin: 0 auto;
+      }
+      &::after {
+        content: url(../imgs/tickets.svg);
+        position: absolute;
+        right: -50px;
+        top: -15px;
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          top: -30px;
+        }
+      }
+    }
+    .description {
+      @include fontSetings($s: 20px, $w: 400, $lh: 150%);
+      opacity: 0.7;
+      max-width: 625px;
+      margin-bottom: 35px;
+      @include adaptive(desktopS, tabletLandscape) {
+        @include fontSetings($s: 16px, $w: 400, $lh: 150%);
+      }
+      @include adaptive(tabletPortrait) {
+        @include fontSetings($s: 16px, $w: 400, $lh: 150%);
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        @include fontSetings($s: 16px, $w: 400, $lh: 150%);
+        text-align: center;
+      }
+      @include adaptive(phoneExtraSmall) {
+        @include fontSetings($s: 15px, $w: 400, $lh: 150%);
+        text-align: center;
+      }
+    }
+    .tabs {
+      padding-bottom: 120px;
+      @include adaptive(desktopS, tabletLandscape) {
+        padding-bottom: 60px;
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        padding-bottom: 65px;
+      }
+      @include adaptive(phoneExtraSmall) {
+        padding-bottom: 65px;
+      }
+      &__controllers {
+        display: flex;
+        gap: 24px;
+        overflow: auto;
+        margin-bottom: 40px;
+        @include adaptive(desktopS) {
+          gap: inherit;
+          justify-content: space-around;
+        }
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          margin-bottom: 25px;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &__item {
+          padding: 12px 18px;
+          cursor: pointer;
+          outline: none;
+          border-radius: 5px;
+          border: 2px solid rgba(255, 255, 255, 0.8);
+          background-color: transparent;
+          color: $white;
+          @include fontSetings($s: 16px, $w: 400, $lh: 150%);
+          transition: 0.3s;
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            padding: 8px 16px 9px 16px;
+          }
+          &:hover {
+            opacity: 0.6;
+            transition: 0.3s;
+          }
+          &.active {
+            border: 2px solid $orange;
+            background: $orange;
+            &:hover {
+              opacity: 1;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+      &__body {
+        flex-wrap: wrap;
+        gap: 50px 70px;
+        position: relative;
+        display: none;
+        @include adaptive(desktopS) {
+          gap: 30px 50px;
+        }
+        @include adaptive(tabletLandscape) {
+          gap: 30px 25px;
+        }
+        @include adaptive(tabletPortrait) {
+          gap: 30px 25px;
+        }
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          gap: 20px 15px;
+        }
+        &.active {
+          display: flex;
+        }
+        &__item {
+          border-radius: 8px;
+          border: 1px solid #c6c6c8;
+          padding: 21px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: calc(20% - 56px);
+          @include adaptive(desktopS) {
+            width: calc(20% - 40px);
+          }
+          @include adaptive(tabletLandscape) {
+            width: calc(20% - 20px);
+          }
+          @include adaptive(tabletPortrait) {
+            width: calc(25% - 20px);
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            width: calc(33.3333% - 10px);
+          }
+          &.hide {
+            display: none;
+          }
+          &__img {
+            object-fit: cover;
+            @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &.orange {
+            background: linear-gradient(180deg, #ff6961 0%, #d70015 100%);
+          }
+          &.blue {
+            background: linear-gradient(180deg, #409cff 0%, #0040dd 100%);
+          }
+          &.green {
+            background: linear-gradient(180deg, #30db5b 0%, #248a3d 100%);
+          }
+          &.purple {
+            background: linear-gradient(180deg, #7d7aff 0%, #3634a3 100%);
+          }
+          &.yellow {
+            background: linear-gradient(180deg, #ffd426 0%, #b25000 100%);
+          }
+        }
+      }
+      .show-all {
+        text-transform: uppercase;
+        @include fontSetings($s: 18px, $w: 450, $lh: 140%);
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $white;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        transform: translateY(calc(100% + 20px));
+        right: 0;
+        bottom: 0;
+        @include adaptive(
+          desktopS,
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait,
+          phoneExtraSmall
+        ) {
+          @include fontSetings($s: 14px, $w: 450, $lh: 140%);
+        }
+        &.hide {
+          display: none;
+        }
+        &::after {
+          content: url("../imgs/Arrow-or.svg");
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    .devices {
+      display: flex;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      @include adaptive(desktopS) {
+        padding-top: 50px;
+      }
+      @include adaptive(tabletLandscape) {
+        overflow: visible;
+        padding-top: 40px;
+      }
+      @include adaptive(tabletPortrait) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        position: relative;
+        overflow: visible;
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        flex-direction: column;
+        padding-bottom: 40px;
+      }
+      &__block {
+        width: 45%;
+        padding-top: 40px;
+
+        @include adaptive(tabletLandscape) {
+          width: 55%;
+        }
+        @include adaptive(tabletPortrait) {
+          width: 59%;
+          padding-top: 0px;
+        }
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          width: 100%;
+          padding: 0;
+        }
+        &:nth-child(1) {
+          @include adaptive(tabletLandscape) {
+          }
+        }
+        &:nth-child(2) {
+          width: 55%;
+          overflow: hidden;
+          padding-top: 0px;
+          @include adaptive(tabletLandscape) {
+            overflow: visible;
+          }
+          @include adaptive(tabletPortrait) {
+            overflow: visible;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            display: none;
+          }
+        }
+        .devices-mob {
+          display: none;
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            display: block;
+          }
+        }
+        picture {
+          @include adaptive(tabletLandscape) {
+            width: calc(100% + 50px);
+            display: block;
+          }
+          @include adaptive(tabletPortrait) {
+            width: calc(100% + 40px);
+            display: block;
+          }
+        }
+        .devices-img {
+          @include adaptive(tabletLandscape) {
+            width: 100%;
+
+            object-fit: contain;
+          }
+          @include adaptive(tabletPortrait) {
+            width: 100%;
+
+            object-fit: contain;
+          }
+        }
+
+        .title {
+          margin-bottom: 30px;
+          @include adaptive(tabletLandscape) {
+            margin-bottom: 15px;
+          }
+          @include adaptive(tabletPortrait) {
+            margin-bottom: 24px;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        .description {
+          margin-bottom: 60px;
+          opacity: 0.8;
+          @include adaptive(tabletLandscape) {
+            margin-bottom: 50px;
+          }
+          @include adaptive(tabletPortrait) {
+            margin-bottom: 30px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            margin-bottom: 15px;
+          }
+        }
+        .btn-orange {
+          padding: 24px 40px;
+          @include fontSetings($s: 26px, $w: 600, $lh: 140%);
+          @include adaptive(desktopS) {
+            @include fontSetings($s: 20px, $w: 600, $lh: 140%);
+            padding: 18px 32px;
+          }
+          @include adaptive(tabletLandscape) {
+            @include fontSetings($s: 18px, $w: 600, $lh: 140%);
+            padding: 16px 28px;
+          }
+          @include adaptive(tabletPortrait) {
+            @include fontSetings($s: 17px, $w: 600, $lh: 140%);
+            padding: 16px 24px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            @include fontSetings($s: 17px, $w: 600, $lh: 140%);
+            padding: 16px 20px;
+            width: 100%;
+            text-align: center;
+          }
+          @include adaptive(phoneExtraSmall) {
+            @include fontSetings($s: 15px, $w: 600, $lh: 140%);
+            padding: 14;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+.platforms {
+  padding: 80px 0;
+  @include adaptive(tabletLandscape) {
+    padding: 50px 0;
+  }
+  @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+    padding: 40px 0;
+  }
+  .container {
+    display: flex;
+    @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px 0;
+    }
+    .platforms__item {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        width: 50%;
+      }
+      img {
+        object-fit: contain;
+        // width: 100%;
+        // height: 100%;
+      }
+      &:nth-child(1) {
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          order: 5;
+        }
+      }
+      &:nth-last-child(1) {
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          order: -1;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+.faq {
+  padding-top: 60px;
+  position: relative;
+  @include adaptive(tabletPortrait) {
+    padding: 0;
+  }
+  @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 210px;
+    @include adaptive(desktopS) {
+      gap: 0 170px;
+    }
+    @include adaptive(tabletLandscape) {
+      gap: 0 30px;
+    }
+    @include adaptive(tabletPortrait) {
+      gap: 0 25px;
+    }
+    @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+      gap: 20px 0px;
+      flex-direction: column;
+    }
+    .title {
+      @include fontSetings($s: 52px, $w: 500, $lh: 140%);
+      margin-bottom: 40px;
+      width: 100%;
+      opacity: 0.9;
+      @include adaptive(desktopS) {
+        @include fontSetings($s: 40px, $w: 500, $lh: 140%);
+      }
+      @include adaptive(tabletLandscape) {
+        @include fontSetings($s: 36px, $w: 500, $lh: 140%);
+      }
+      @include adaptive(tabletPortrait) {
+        @include fontSetings($s: 30px, $w: 500, $lh: 140%);
+        margin-bottom: 25px;
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        @include fontSetings($s: 30px, $w: 500, $lh: 140%);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        @include fontSetings($s: 24px, $w: 500, $lh: 140%);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
+    .faq__list {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 105px);
+      &:nth-last-child(2) {
+        .faq__list__item {
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+      @include adaptive(desktopS) {
+        width: calc(50% - 85px);
+      }
+      @include adaptive(tabletLandscape) {
+        width: calc(50% - 15px);
+      }
+      @include adaptive(tabletPortrait) {
+        width: calc(50% - 13px);
+      }
+      @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+        width: 100%;
+      }
+
+      &__item {
+        padding: 30px 0 40px 0;
+        width: calc(100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        height: fit-content;
+        cursor: pointer;
+        @include adaptive(desktopS) {
+          padding: 25px 0 30px 0;
+        }
+        @include adaptive(tabletLandscape) {
+          padding: 25px 0;
+        }
+        @include adaptive(tabletPortrait) {
+          padding: 20px 0;
+        }
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          padding: 20px 0;
+        }
+        &:nth-last-child(1) {
+          border: none;
+        }
+        &__title {
+          @include fontSetings($s: 24px, $w: 500, $lh: 140%);
+          display: flex;
+          justify-content: space-between;
+          gap: 60px;
+          margin-bottom: 20px;
+          @include adaptive(desktopS, tabletLandscape) {
+            @include fontSetings($s: 18px, $w: 500, $lh: 140%);
+          }
+          @include adaptive(tabletPortrait) {
+            @include fontSetings($s: 16px, $w: 500, $lh: 140%);
+            gap: 50px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            @include fontSetings($s: 16px, $w: 500, $lh: 140%);
+          }
+          &::after {
+            content: url("../imgs/down.svg");
+            width: 32px;
+            height: 32px;
+          }
+        }
+        &__description {
+          width: 90%;
+          @include fontSetings($s: 20px, $w: 400, $lh: 150%);
+          opacity: 0.8;
+          display: none;
+          @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
+            @include fontSetings($s: 16px, $w: 400, $lh: 150%);
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            @include fontSetings($s: 14px, $w: 500, $lh: 140%);
+          }
+        }
+        &.open {
+          .faq__list__item__description {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    position: relative;
+    overflow-x: hidden;
+    .container {
+      display: flex;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 90px;
+      padding-bottom: 70px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+      .footer__block {
+        &.contact {
+          @include adaptive(phoneLandscape, phonePortrait) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+        .nav {
+          display: flex;
+          gap: 140px;
+          @include adaptive(desktopS) {
+            gap: 50px;
+          }
+          @include adaptive(tabletLandscape, tabletPortrait) {
+            gap: 20px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            gap: 30px;
+          }
+
+          .nav__list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            &__item {
+              max-width: 220px;
+              @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
+                max-width: 160px;
+              }
+              a {
+                @include fontSetings($s: 18px, $w: 400, $lh: 140%);
+                color: $white;
+                opacity: 0.8;
+                @include adaptive(
+                  desktopS,
+                  tabletLandscape,
+                  tabletPortrait,
+                  phoneLandscape,
+                  phonePortrait,
+                  phoneExtraSmall
+                ) {
+                  @include fontSetings($s: 14px, $w: 400, $lh: 140%);
+                }
+              }
+            }
+          }
+        }
+        .list-title {
+          @include fontSetings($s: 20px, $w: 600, $lh: 140%);
+          margin-bottom: 20px;
+          @include adaptive(
+            desktopS,
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait,
+            phoneExtraSmall
+          ) {
+            @include fontSetings($s: 16px, $w: 600, $lh: 140%);
+          }
+        }
+
+        .contact-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 50px;
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            margin-bottom: 0px;
+          }
+          @include adaptive(phoneExtraSmall) {
+            margin-bottom: 15px;
+          }
+          &__item {
+            a {
+              @include fontSetings($s: 18px, $w: 400, $lh: 140%);
+              color: $white;
+              opacity: 0.8;
+              @include adaptive(
+                desktopS,
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait,
+                phoneExtraSmall
+              ) {
+                @include fontSetings($s: 14px, $w: 600, $lh: 140%);
+              }
+            }
+          }
+        }
+        .sub-title {
+          @include fontSetings($s: 18px, $w: 400, $lh: 140%);
+          opacity: 0.8;
+          margin-bottom: 20px;
+          @include adaptive(
+            desktopS,
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait,
+            phoneExtraSmall
+          ) {
+            @include fontSetings($s: 14px, $w: 600, $lh: 140%);
+          }
+        }
+        .chat-links {
+          display: flex;
+          gap: 24px;
+          align-items: center;
+          @include adaptive(
+            desktopS,
+            tabletLandscape,
+            phoneLandscape,
+            phonePortrait,
+            phoneExtraSmall
+          ) {
+            gap: 16px;
+          }
+        }
+      }
+      .payment-list {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 30px;
+          gap: 20px;
+        }
+        &__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            max-width: calc(33.333% - 20px);
+          }
+          img {
+            @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .copyright {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        opacity: 0.8;
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+          flex-direction: column;
+          right: 50%;
+          transform: translateX(50%);
+        }
+        .copyright-item {
+          display: flex;
+          align-items: center;
+        }
+        @include adaptive(tabletLandscape) {
+          right: 50px;
+        }
+        @include adaptive(tabletPortrait) {
+          right: 40px;
+        }
+        &__text {
+          @include fontSetings($s: 11px, $w: 400, $lh: 140%);
+          white-space: nowrap;
+        }
+
+        .ellipse {
+          margin: 0 10px;
+          @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .tree {
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+  }
+  .gradient {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    height: 80%;
+  }
+}

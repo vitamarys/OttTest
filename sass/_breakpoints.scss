@@ -1,0 +1,18 @@
+$breakpoints: (
+  phoneExtraSmall: "(max-width: 330px)",
+  phonePortrait: "(min-width:330px) and (max-width: 414px)",
+  phoneLandscape: "(min-width:415px) and (max-width: 667px)",
+  tabletPortrait: "(min-width:668px) and (max-width: 768px)",
+  tabletLandscape: "(min-width:769px) and (max-width: 1024px)",
+  desktopS: "(min-width:1025px) and (max-width: 1440px)",
+  desktopM: "(min-width:1441px) and (max-width: 1680px)",
+  desktopL: "(min-width:1681px) and (max-width: 1920px)",
+  desktopXL: "(min-width:1921px)",
+);
+@mixin adaptive($keys...) {
+  @each $key in $keys {
+    @media #{map-get($breakpoints, $key)} {
+      @content;
+    }
+  }
+}

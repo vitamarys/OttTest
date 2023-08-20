@@ -1,0 +1,61 @@
+@import "./_breakpoints";
+html {
+  font-family: $baseFont;
+  position: relative;
+}
+body {
+  background: $main-bg;
+  color: $white;
+}
+main,
+footer {
+  &.no-scroll {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+  }
+}
+section:not(
+    .lift,
+    .listing-about,
+    .dev-about,
+    .blog-hero,
+    .news-hero,
+    .sub-form
+  ) {
+  width: 100%;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1460px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include adaptive(desktopS) {
+    max-width: 1096px;
+  }
+  @include adaptive(tabletLandscape) {
+    padding: 0 50px;
+  }
+  @include adaptive(tabletPortrait) {
+    padding: 0 40px;
+  }
+  @include adaptive(phoneLandscape, phonePortrait, phoneExtraSmall) {
+    padding: 0 16px;
+  }
+}
+.btn-orange {
+  outline: none;
+  border: none;
+
+  align-items: center;
+  border-radius: 5px;
+  background: $orange;
+  color: $white;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}
